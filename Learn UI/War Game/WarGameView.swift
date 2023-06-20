@@ -9,11 +9,26 @@ import SwiftUI
 
 struct WarGameView: View {
     
-    var playerScore = 0;
-    var cpuScore = 0;
+    @State var playerCard = "card2"
+    @State var cpuCard = "card3"
+    @State var playerScore = 0;
+    @State var cpuScore = 0;
     
     func deal(){
         print   ("Deal cards!")
+        
+        var sortedPlayerCard = Int.random(in: 2...14)
+        playerCard = "card" + String(sortedPlayerCard)
+        
+        var sortedCpuCard = Int.random(in: 2...14)
+        cpuCard = "card" + String(sortedCpuCard)
+        
+        if sortedPlayerCard > sortedCpuCard{
+            playerScore += 1
+        }
+        else if sortedCpuCard > sortedPlayerCard{
+            cpuScore += 1
+        }
     }
     
     var body: some View {
@@ -26,8 +41,8 @@ struct WarGameView: View {
                 Image("logo")
                 
                 HStack(alignment: .center, spacing: 50.0){
-                    Image("card2")
-                    Image("card3")
+                    Image(playerCard)
+                    Image(cpuCard)
                 }
                 
                 Button(action: {
