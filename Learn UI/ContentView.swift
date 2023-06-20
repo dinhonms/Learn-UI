@@ -17,7 +17,8 @@ struct ContentView: View {
 //        }
 //        .padding()
         
-        LoginVIew()
+//        LoginVIew()
+        WarGameView()
     }
 }
 
