@@ -1,4 +1,4 @@
-# SwiftUI - Learn-UI
+# SwiftUI - War Card Game
 A simple Swift/SwiftUI study project from the course https://learn.codewithchris.com/collections. This project is a functional simple war card game.
 
 #Screenshots
